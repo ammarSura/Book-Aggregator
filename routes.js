@@ -22,21 +22,23 @@ app.get('/', function(req, res) {
 app.get('/getter/:term', async (req, res) => {
     const params = req.params;
 
-    // getAllResults(params).then( (result) => {
-    //     console.log('res', result);
-    //     results = result;
-    //     res.json(result);
-    // }, (error) => {
-    //     console.log('err', error);
-    //     results = error;
-    //     res.json(error);
-    // });
+    getAllResults(params).then( (result) => {
+        console.log('res', result);
+        results = result;
+        res.json(result);
+    }, (error) => {
+        console.log('err', error);
+        results = error;
+        res.json(error);
+    });
 
-    res.json([{
-        title: 'Is Our Planet Warming Up-Isaac Asimov',
-        price: '310',
-        url: 'https://www.usedbooksfactory.com/buy-second-hand-old-books/detail/is-our-planet-warming-up-isaac-asimov-not-availableedition-9780431076409?book_id=54545'
-      }])
+    res.status(202);
+
+    // res.json([{
+    //     title: 'Is Our Planet Warming Up-Isaac Asimov',
+    //     price: '310',
+    //     url: 'https://www.usedbooksfactory.com/buy-second-hand-old-books/detail/is-our-planet-warming-up-isaac-asimov-not-availableedition-9780431076409?book_id=54545'
+    //   }])
     
     
     
