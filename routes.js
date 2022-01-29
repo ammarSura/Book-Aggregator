@@ -25,7 +25,7 @@ app.get('/getter/:term', async (req, res) => {
     getAllResults(params).then( (result) => {
         console.log('res', result);
         results = result;
-        res.json(result);
+        // res.json(result);
         res.status(202);
     }, (error) => {
         console.log('err', error);
