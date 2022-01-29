@@ -26,13 +26,14 @@ app.get('/getter/:term', async (req, res) => {
         console.log('res', result);
         results = result;
         res.json(result);
+        res.status(202);
     }, (error) => {
         console.log('err', error);
         results = error;
         res.json(error);
     });
 
-    res.status(202);
+    
 
     // res.json([{
     //     title: 'Is Our Planet Warming Up-Isaac Asimov',
