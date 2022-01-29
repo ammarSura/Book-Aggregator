@@ -242,7 +242,7 @@ async function fetcher(inp) {
     loading.innerText = "Browsing for results...";
     
     resultsbox.appendChild(loading);
-    await fetch('http://localhost:8080/getter/' + inp)
+    await fetch('/getter/' + inp)
         .then(res => res.json())
         .then(data => {
             
