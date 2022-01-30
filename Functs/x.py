@@ -1,8 +1,8 @@
 import sys
 import json
+from bs4 import BeautifulSoup
 
-# for line in sys.stdin:
-#     print (line)
+
 
 print(sys.stdin.read())
 
