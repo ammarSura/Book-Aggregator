@@ -252,7 +252,8 @@ async function fetcher(inp) {
         .then(data => {
             
             
-            loading.innerText = "Results: ";
+            // loading.innerText = "Results: ";
+            loading.innerText = data.term;
             resultsbox.appendChild(loading);
             console.log(data)
             // printer(data)
