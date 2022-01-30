@@ -1,7 +1,40 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+var results = false;
 const getAllResults = require("./x");
+const {PythonShell} = require('python-shell');
+
+function getAllResults(keyword) {
+    const pyshell = new PythonShell('./Functs/searcher.py', {mode: "json"});
+
+    let promise = new Promise (function(resolve, reject) {
+    pyshell.send(keyword);
+
+    pyshell.on('message', function (message) {
+        
+        resolve(message);
+    
+    });
+
+    pyshell.end(function (err,code,signal) {
+    if (err) throw err;
+    console.log('The exit code was: ' + code);
+    console.log('The exit signal was: ' + signal);
+    console.log('finished');
+    });
+
+    setTimeout(() => {reject("Search timed out")} , 120000);
+
+
+
+    })
+
+    return promise;
+
+
+}
+
 
 // console.log(getAllResults("asimov")[0])
 
@@ -21,17 +54,22 @@ app.get('/', function(req, res) {
 // about page
 app.get('/getter/:term', async (req, res) => {
     const params = req.params;
-
+    var results = false;
+    // if (!result)
+    // res.status(202);
+    // res.json("nice")
     getAllResults(params).then( (result) => {
         console.log('res', result);
         results = result;
-        // res.json(result);
-        res.status(202);
+        res.json(result);
+        
     }, (error) => {
         console.log('err', error);
         results = error;
         res.json(error);
     });
+
+    
 
     
 

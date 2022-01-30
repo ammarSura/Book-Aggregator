@@ -1,6 +1,6 @@
 const {PythonShell} = require('python-shell');
 
-
+var results = false;
 function getAllResults(keyword) {
     const pyshell = new PythonShell('./Functs/searcher.py', {mode: "json"});
 
@@ -29,20 +29,25 @@ function getAllResults(keyword) {
 
 }
 
-// async function getter() {
-//     await getAllResults("asimov").then( (result) => {
-//         console.log('res', result);
-//     }, (error) => {
-//         console.log('err', error);
-//     });
+async function getter() {
+    await getAllResults("asimov").then( (result) => {
+        console.log('res', result[0]);
+        results = result;
+    }, (error) => {
+        console.log('err', error);
+        results = error;
+    });
 
-//     // console.log('answer', ans);
-// }
+    // console.log('answer', ans);
+}
 
 // const x = getAllResults("asimov");
 
 // // console.log('as', x)
 // getter()
+// while(results) {
+//     console.log('asa', results);
+// }
 
 
 module.exports = getAllResults;

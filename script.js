@@ -242,16 +242,21 @@ async function fetcher(inp) {
     loading.innerText = "Browsing for results...";
     
     resultsbox.appendChild(loading);
-    await fetch('/getter/' + inp)
-        .then(res => res.json())
+    await fetch('/getter/' + inp, {
+        keepalive: true
+    })
+        .then(res => res.status)
         .then(data => {
-            
-            
-            loading.innerText = "Results: ";
-            resultsbox.appendChild(loading);
             console.log(data)
-            printer(data)
-        });
+        })
+        // .then(data => {
+            
+            
+        //     loading.innerText = "Results: ";
+        //     resultsbox.appendChild(loading);
+        //     console.log(data)
+        //     printer(data)
+        // });
 
     
 
