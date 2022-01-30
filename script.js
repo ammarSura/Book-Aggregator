@@ -255,7 +255,7 @@ async function fetcher(inp) {
             loading.innerText = "Results: ";
             resultsbox.appendChild(loading);
             console.log(data)
-            printer(data)
+            // printer(data)
         });
 
     

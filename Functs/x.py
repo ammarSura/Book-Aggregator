@@ -1,8 +1,9 @@
 import sys
+import json
 
 # for line in sys.stdin:
 #     print (line)
 
 print(sys.stdin.read())
 
-print("hello")
+print(json.dumps([{"name": "amme"}]))
