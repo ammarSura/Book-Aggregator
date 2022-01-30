@@ -245,18 +245,18 @@ async function fetcher(inp) {
     await fetch('/getter/' + inp, {
         keepalive: true
     })
-        .then(res => res.status)
-        .then(data => {
-            console.log(data)
-        })
+        .then(res => res.json())
         // .then(data => {
-            
-            
-        //     loading.innerText = "Results: ";
-        //     resultsbox.appendChild(loading);
         //     console.log(data)
-        //     printer(data)
-        // });
+        // })
+        .then(data => {
+            
+            
+            loading.innerText = "Results: ";
+            resultsbox.appendChild(loading);
+            console.log(data)
+            printer(data)
+        });
 
     
 

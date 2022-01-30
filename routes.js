@@ -5,35 +5,35 @@ var results = false;
 const getAllResults = require("./x");
 const {PythonShell} = require('python-shell');
 
-function getAllResults(keyword) {
-    const pyshell = new PythonShell('./Functs/searcher.py', {mode: "json"});
+// function getAllResults(keyword) {
+//     const pyshell = new PythonShell('./Functs/searcher.py', {mode: "json"});
 
-    let promise = new Promise (function(resolve, reject) {
-    pyshell.send(keyword);
+//     let promise = new Promise (function(resolve, reject) {
+//     pyshell.send(keyword);
 
-    pyshell.on('message', function (message) {
+//     pyshell.on('message', function (message) {
         
-        resolve(message);
+//         resolve(message);
     
-    });
+//     });
 
-    pyshell.end(function (err,code,signal) {
-    if (err) throw err;
-    console.log('The exit code was: ' + code);
-    console.log('The exit signal was: ' + signal);
-    console.log('finished');
-    });
+//     pyshell.end(function (err,code,signal) {
+//     if (err) throw err;
+//     console.log('The exit code was: ' + code);
+//     console.log('The exit signal was: ' + signal);
+//     console.log('finished');
+//     });
 
-    setTimeout(() => {reject("Search timed out")} , 120000);
-
-
-
-    })
-
-    return promise;
+//     setTimeout(() => {reject("Search timed out")} , 120000);
 
 
-}
+
+//     })
+
+//     return promise;
+
+
+// }
 
 
 // console.log(getAllResults("asimov")[0])
@@ -85,4 +85,4 @@ app.get('/getter/:term', async (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port);
-console.log('Server is listening on port:' + port);
+console.log('Server is listening on port: ' + port);
