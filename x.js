@@ -2,7 +2,8 @@ const {PythonShell} = require('python-shell');
 
 var results = false;
 function getAllResults(keyword) {
-    const pyshell = new PythonShell('./Functs/searcher.py', {mode: "json"});
+    // const pyshell = new PythonShell('./Functs/searcher.py', {mode: "json"});
+    const pyshell = new PythonShell('./Functs/x.py', {mode: "json"});
 
     let promise = new Promise (function(resolve, reject) {
     pyshell.send(keyword);

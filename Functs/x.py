@@ -5,4 +5,4 @@ import sys
 
 print(sys.stdin.read())
 
-print('hi')
+print("hello")
