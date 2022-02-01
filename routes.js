@@ -66,7 +66,7 @@ app.get('/getter/:term', async (req, res) => {
     
   
     await getAllResults(params.term).then( (result) => {
-        console.log('all results', result.length, result);
+        console.log('all results1', result);
         
         res.json(result);
         

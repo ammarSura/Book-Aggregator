@@ -48,23 +48,10 @@ def search(string, l = None):
     return results
 
 if __name__ == "__main__":   
-    # s = str(sys.stdin.read() )[1:-2]
-    # file1 = open("x.txt", "w") 
-    # file1.write(s)
-    # x = (search(str(sys.stdin.read() )[1:-2]))
-    x = search("romila")
-    # print(json.dumps(sys.stdin.read()))
-
-    # for i in x:
-    #     print(json.dumps(i))
-    # print(len(x))
-    print(len(x))
-    print(json.dumps(x))
-    # # print(len(x))
-    # sys.stdout("hi")
-    # print(x[0].title)
     
-
-    # print(json.dumps([{"ammar": "name"}]))
+    x = (search(str(sys.stdin.read() )[1:-2]))
+    
+    print(json.dumps(x))
+    
     
 
