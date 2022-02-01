@@ -51,21 +51,28 @@ app.get('/', function(req, res) {
   res.render('pages/index');
 });
 
+app.get('/home', function(req, res) {
+    res.render('pages/index');
+  });
+
+app.get('/results/:term', function(req, res) {
+    console.log(req.params)
+    res.render('pages/results');
+  });
+
 // about page
 app.get('/getter/:term', async (req, res) => {
     const params = req.params;
-    var results = false;
-    // if (!result)
-    // res.status(202);
-    // res.json("nice")
-    getAllResults(params).then( (result) => {
-        console.log('res', result);
-        results = result;
+    
+  
+    await getAllResults(params.term).then( (result) => {
+        console.log('all results', result.length, result);
+        
         res.json(result);
         
     }, (error) => {
         console.log('err', error);
-        results = error;
+       
         res.json(error);
     });
 

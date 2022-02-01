@@ -20,7 +20,7 @@ def getBooksHalf(searcher):
         
         priceString = str(item.find(class_ = "product-item--price"))
         helper2 = priceString.find("<small aria-hidden=\"true\">Rs.") + 30
-        
+        author = ""
         if helper3 > - 1:
             author = (titleString[helper3 + 3: -4]).strip()
         
@@ -36,7 +36,8 @@ def getBooksHalf(searcher):
             {
                 "title": title, 
                 "price": price, 
-                "url": url
+                "url": url,
+                "author": author
             }
         )
 

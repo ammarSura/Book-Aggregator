@@ -32,7 +32,8 @@ def getBooksbest(searcher):
             {
                 "title": title, 
                 "price": price, 
-                "url": url
+                "url": url,
+                "author": ""
             }
         )
 

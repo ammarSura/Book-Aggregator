@@ -2,6 +2,7 @@ const {PythonShell} = require('python-shell');
 
 var results = false;
 function getAllResults(keyword) {
+    var c = 0;
     // const pyshell = new PythonShell('./Functs/searcher.py', {mode: "json"});
     const pyshell = new PythonShell('./Functs/searcher.py', {mode: "json"});
 
@@ -10,7 +11,15 @@ function getAllResults(keyword) {
 
     pyshell.on('message', function (message) {
         
+        // console.log('axe', message);
+        // console.log(c);
+        // c++;
+
+
+        c = message;
         resolve(message);
+        // c = c + message.
+        // console.log('bv', message);
     
     });
 
@@ -19,6 +28,7 @@ function getAllResults(keyword) {
     console.log('The exit code was: ' + code);
     console.log('The exit signal was: ' + signal);
     console.log('finished');
+    console.log('m', c.length, c);
     });
 
     setTimeout(() => {reject("Search timed out")} , 120000);
@@ -30,21 +40,17 @@ function getAllResults(keyword) {
 
 }
 
-async function getter() {
-    await getAllResults("asimov").then( (result) => {
-        console.log('res', result[0]);
-        results = result;
-    }, (error) => {
-        console.log('err', error);
-        results = error;
-    });
 
-    // console.log('answer', ans);
+async function getter() {
+const x = await getAllResults("asimov");
+return x;
+// for (let i = 0; i <x.length; i++ ) {
+//     console.log(String(i) + x[i]);
+// }
 }
 
-// const x = getAllResults("asimov");
-
-// // console.log('as', x)
+// console.log(getter());
+// console.log('as', x.length)
 // getter()
 // while(results) {
 //     console.log('asa', results);

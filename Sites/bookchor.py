@@ -33,7 +33,8 @@ def getBooksChor(searcher):
             {
                 "title": title, 
                 "price": price, 
-                "url": url
+                "url": url,
+                "author": author
             }
         )
 

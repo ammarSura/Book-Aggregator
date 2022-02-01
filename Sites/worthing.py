@@ -22,6 +22,7 @@ def getBooksWorthing(searcher):
         title = titleString[titleString.find("\">") + 2: titleString.find("|")]
 
         helper = title.find(" by ")
+        author = ""
 
         if helper > -1 :
             author = title[helper + 4: title.find("|")].strip()
@@ -36,7 +37,8 @@ def getBooksWorthing(searcher):
             {
                 "title": title, 
                 "price": price, 
-                "url": url
+                "url": url,
+                "author": author
             }
         )
     return books
