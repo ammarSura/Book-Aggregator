@@ -246,7 +246,7 @@ async function fetcher(inp) {
     loading.innerText = "Loading results...";
     
     resultsbox.appendChild(loading);
-    await fetch('/getter/' + inp, {
+    await fetch('/getResults/' + inp, {
         keepalive: true
     })
         .then(res => res.json())
@@ -296,7 +296,7 @@ document.querySelector("#search-bar").addEventListener("keyup", function(event) 
 const url = String(window.location.href)
 if (url.includes("results")) {
   
-  fetcher(url.slice(30, ))
+  fetcher(url.slice(url.search('results/') + 8, ))
 }
 
 
