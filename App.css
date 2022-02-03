@@ -89,8 +89,13 @@ body {
     }
 
     .item-4 p{
-        text-align: right;
+        margin-left: 10%;
+        text-align: left;
         font-family: Courier;
-        font-size: 2vw;    
+        font-size: 3vw;    
+    }
+
+    .item-1 {
+        margin-bottom: 15%;
     }
 }
