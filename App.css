@@ -133,6 +133,7 @@ header img{
 
     font-size: 1.2em;
     height: 1.6em;
+    width: 45vw;
     font-family: courier;
     border: none;
     border-bottom: solid;
@@ -157,11 +158,11 @@ header img{
 }
 
 .search-button {
-    width: 2em;
-    height: 1.5em;
+    width: 10vw;
+    height: 8vw;
     border: none;
     background-color: #ccc;
-    font-size: 1.5em;
+    font-size: 4vw;
     border-radius: 5px;
 }
 
