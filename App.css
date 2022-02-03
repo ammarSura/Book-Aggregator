@@ -1,8 +1,10 @@
 body {
     margin-left: 10%;
     margin-right: 10%;
-    
+    font-family: 'Courier New', Courier, monospace;
 }
+
+/* main page */
 
 .main-container {
     margin-top: 20%;
@@ -39,7 +41,6 @@ body {
     font-size: 2.5vw;
     font-family: Courier;
     height: 4vw;
-    
 
 }
 
@@ -48,7 +49,11 @@ body {
 }
 
 .item-3 button {
-    font-size: 3.5vw;
+    font-size: 3vw;
+    border: none;
+    background-color: #ccc;
+    border-radius: 5px;
+
 }
 
 .item-4 {
@@ -78,14 +83,15 @@ body {
         font-size: 4vw;
         font-family: Courier;
         height: 6vw;
-        
     
     }
     
     .item-3 button {
-        /* height: 100%; */
         margin-top: 0.1vw;
-        font-size: 5.2vw;
+        font-size: 4.8vw;
+        border: none;
+        background-color: #ccc;
+        border-radius: 5px;
     }
 
     .item-4 p{
@@ -98,4 +104,109 @@ body {
     .item-1 {
         margin-bottom: 15%;
     }
+}
+
+/* results */
+
+
+header img{
+    
+    width: 60%;
+    max-width: 100%;  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+
+}
+
+
+.search-box {
+
+    margin-top: 1em;
+    border: solid;
+    border-radius: 1em;
+    border-color: #aaa;
+}
+
+.search-box input {
+
+    font-size: 1.2em;
+    height: 1.6em;
+    font-family: courier;
+    border: none;
+    border-bottom: solid;
+    border-width: 0.2em;
+    border-color: #aaa;
+    outline: none;
+
+}
+
+.search-box input:focus {
+    
+    border: solid;
+    border-color: #60b6f7;
+    border-radius: 0.5em;
+    background-color: #dfeaf2;
+
+}
+
+.search-box li {
+    display: inline-block;
+    
+}
+
+.search-button {
+    width: 2em;
+    height: 1.5em;
+    border: none;
+    background-color: #ccc;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+
+.results {
+
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: solid;
+    border-radius: 1em;
+    padding-top: 1em;
+    border-color: #aaa;
+    height: 65vh;
+    overflow-y: auto;
+
+}
+
+.results h3 {
+
+    padding-left: 3%;
+
+}
+
+.box {
+    
+    border-bottom: solid;
+    margin-bottom: 1em;
+    border-bottom: solid;
+    border-color: #aaa;
+    background-color: #fff;
+    padding: 0.5em;
+  
+}
+
+ul {
+
+    list-style-type:none;
+
+}
+
+.link {
+
+    width: 9em;
+    border-radius: 0.2em;
+    background-color: #fff;
+    border-radius: 5px;
+
 }

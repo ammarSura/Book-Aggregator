@@ -14,6 +14,7 @@ function printer(lst) {
       price.innerText = "Price: ₹" + lst[i].price;
       author.innerText = "Author: " + lst[i].author;
       url.innerText = "Link";
+      url.classList.add("link");
       url.onclick = function() {
         window.open(lst[i].url)
       }
