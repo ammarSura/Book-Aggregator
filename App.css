@@ -72,10 +72,25 @@ body {
     .item-3 {
         margin-left: 4vw;
     }
+
+    .item-2 input {
+        width: 100%;
+        font-size: 4vw;
+        font-family: Courier;
+        height: 6vw;
+        
+    
+    }
     
     .item-3 button {
         /* height: 100%; */
-        margin-top: 0.3vw;
-        font-size: 3.5vw;
+        margin-top: 0.1vw;
+        font-size: 5.2vw;
+    }
+
+    .item-4 p{
+        text-align: right;
+        font-family: Courier;
+        font-size: 2vw;    
     }
 }
