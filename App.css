@@ -38,9 +38,9 @@ body {
 
 .item-2 input {
     width: 100%;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     font-family: Courier;
-    height: 4vw;
+    height: 2em;
 
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .item-3 button {
-    font-size: 3vw;
+    font-size: 1.5vw;
     border: none;
     background-color: #ccc;
     border-radius: 5px;
@@ -62,56 +62,14 @@ body {
 .item-4 p{
     text-align: right;
     font-family: Courier;
-    font-size: 1.75vw;    
-}
-@media only screen and (max-width: 769px) {
-    .item-1 img {
-        max-width: 100%;
-        width: 100%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto 
-    
-    }
-
-    .item-3 {
-        margin-left: 4vw;
-    }
-
-    .item-2 input {
-        width: 100%;
-        font-size: 4vw;
-        font-family: Courier;
-        height: 6vw;
-    
-    }
-    
-    .item-3 button {
-        margin-top: 0.1vw;
-        font-size: 4.8vw;
-        border: none;
-        background-color: #ccc;
-        border-radius: 5px;
-    }
-
-    .item-4 p{
-        margin-left: 10%;
-        text-align: left;
-        font-family: Courier;
-        font-size: 3vw;    
-    }
-
-    .item-1 {
-        margin-bottom: 15%;
-    }
+    font-size: 1.5vw;    
 }
 
-/* results */
-
+/* resulta */
 
 header img{
     
-    width: 100%;
+    width: 50%;
     max-width: 100%;  
     display: block;
     margin-left: auto;
@@ -158,11 +116,20 @@ header img{
 }
 
 .search-button {
-    width: 10vw;
-    height: 8vw;
+    width: 2.3em;
+    height: 2.3em;
     border: none;
     background-color: #ccc;
     font-size: 4vw;
+    border-radius: 5px;
+}
+
+.search-button1 {
+    width: 1.8em;
+    height: 1.8em;
+    border: none;
+    background-color: #ccc;
+    font-size: 2vw;
     border-radius: 5px;
 }
 
@@ -211,3 +178,93 @@ ul {
     border-radius: 5px;
 
 }
+
+@media only screen and (max-width: 769px) {
+    .item-1 img {
+        max-width: 100%;
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto 
+    
+    }
+
+    .item-3 {
+        margin-left: 4vw;
+    }
+
+    .item-2 input {
+        width: 100%;
+        font-size: 4vw;
+        font-family: Courier;
+        height: 6vw;
+    
+    }
+    
+    .item-3 button {
+        margin-top: 0.1vw;
+        font-size: 4.8vw;
+        border: none;
+        background-color: #ccc;
+        border-radius: 5px;
+    }
+
+    .item-4 p{
+        margin-left: 10%;
+        text-align: left;
+        font-family: Courier;
+        font-size: 3vw;    
+    }
+
+    .item-1 {
+        margin-bottom: 15%;
+    }
+
+    .search-button1 {
+        width: 2.5em;
+        height: 2.5em;
+        border: none;
+        background-color: #ccc;
+        font-size: 3vw;
+        border-radius: 5px;
+    }
+
+    header img{
+    
+        width: 100%;
+        max-width: 100%;  
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+    
+    }
+
+    
+}
+
+@media only screen and (max-width: 450px) {
+    .search-button1 {
+        width: 2.5em;
+        height: 2.5em;
+        border: none;
+        background-color: #ccc;
+        font-size: 4vw;
+        border-radius: 5px;
+    }
+
+    header img{
+    
+        width: 100%;
+        max-width: 100%;  
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+    
+    }
+}
+
+/* results */
+
+
