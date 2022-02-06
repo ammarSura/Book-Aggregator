@@ -11,7 +11,7 @@ body {
 
 }
 .item-1 img {
-    width: 60%;
+    width: 40%;
     max-width: 100%;  
     display: block;
     margin-left: auto;
@@ -20,7 +20,7 @@ body {
 }
 
 .item-1 {
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 .searcher {
@@ -69,7 +69,7 @@ body {
 
 header img{
     
-    width: 50%;
+    width: 30%;
     max-width: 100%;  
     display: block;
     margin-left: auto;
@@ -174,13 +174,16 @@ ul {
 
 @media only screen and (max-width: 769px) {
     .item-1 img {
-        max-width: 100%;
+        max-width: 50%;
         width: 100%;
         display: block;
         margin-left: auto;
         margin-right: auto 
     
     }
+    /* .item-1 {
+        margin-bottom: 1%;
+    } */
 
     .item-3 {
         margin-left: 4vw;
@@ -209,9 +212,7 @@ ul {
         font-size: 3vw;    
     }
 
-    .item-1 {
-        margin-bottom: 15%;
-    }
+    
 
     .search-button {
         width: 2.5em;
@@ -224,7 +225,7 @@ ul {
 
     header img{
     
-        width: 100%;
+        width: 40%;
         max-width: 100%;  
         display: block;
         margin-left: auto;
@@ -248,7 +249,7 @@ ul {
 
     header img{
     
-        width: 100%;
+        width: 50%;
         max-width: 100%;  
         display: block;
         margin-left: auto;
