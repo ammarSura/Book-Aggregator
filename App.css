@@ -116,11 +116,11 @@ header img{
 }
 
 .search-button {
-    width: 2.3em;
-    height: 2.3em;
+    width: 1.75em;
+    height: 1.75em;
     border: none;
     background-color: #ccc;
-    font-size: 4vw;
+    font-size: 1.5em;
     border-radius: 5px;
 }
 
@@ -215,11 +215,11 @@ ul {
     
 
     .search-button {
-        width: 2.5em;
-        height: 2.5em;
+        width: 2.4em;
+        height: 2.4em;
         border: none;
         background-color: #ccc;
-        font-size: 3vw;
+        font-size: 2.25vw;
         border-radius: 5px;
     }
 
