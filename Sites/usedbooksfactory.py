@@ -16,7 +16,6 @@ def getBooksFactory(searcher):
         urlString = str(item.find(class_ = "aa-product-img"))
 
         titleString = str(item.find(class_ = "aa-add-card-btn add_to_cart"))
-        print('newz', titleString)
         helper1 = titleString.find("data-bookname=") + 15
         
 
@@ -25,7 +24,6 @@ def getBooksFactory(searcher):
         helper2 = priceString.find("data-price=\"") + 12
 
         title = titleString[helper1:titleString.find("data-category", helper1) - 2]
-        print('newz1', title)
 
         author = title[title.find("-") + 1:]
 
