@@ -7,6 +7,7 @@ def getBooksHalf(searcher):
     req = requests.get(url + searcher)
     soup = BeautifulSoup(req.text, "html.parser")
     items = (soup.find_all(class_ = "product-grid-item"))
+    print(items[0])
 
     for item in items:
         # book = Book()
@@ -43,3 +44,7 @@ def getBooksHalf(searcher):
         )
 
     return books
+
+if __name__ == "__main__":
+    lst = getBooksHalf("asimov") 
+    print(lst)

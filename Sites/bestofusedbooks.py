@@ -9,6 +9,10 @@ def getBooksbest(searcher):
     req = requests.get(url1 + searcher + url2)
     soup = BeautifulSoup(req.text, "html.parser")
     items = (soup.find_all(class_ = "product-card product-card--list"))
+    for i in items:
+        print("==============")
+        print(i)
+        print("==============")
 
     for item in items:
         
@@ -24,7 +28,7 @@ def getBooksbest(searcher):
         
         title = titleString[34:titleString.find("<", 34)]
 
-        price = priceString[priceString.find("from Rs. ") + 9: priceString.find("</span>") - 4]
+        price = priceString[priceString.find("Rs. ") + 4: priceString.find("</span>") - 4]
         
         url = "https://bestofusedbooks.com/" + urlString[33:urlString.find("\"", 33)]
 
@@ -46,5 +50,5 @@ if __name__ == "__main__":
     lst = getBooksbest("asimov")
 
     for b in lst:
-        print(b.title, b.soldout)
+        print(b["title"], b["price"])
 

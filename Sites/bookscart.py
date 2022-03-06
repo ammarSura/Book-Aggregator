@@ -45,8 +45,5 @@ def getBooks99(searcher):
     return books
 
 if __name__ == "__main__":
-    lst = getBooks99("asimov") 
-    print(len(lst))
-    for i in range(len(lst)):
-        print(i, lst[i].price)
-        print((lst[i].price) == "")
+    lst = getBooks99("computer") 
+    print(lst)
