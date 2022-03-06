@@ -36,7 +36,8 @@ def getBooks99(searcher):
                 "title": title, 
                 "price": price, 
                 "url": url,
-                "author": author
+                "author": author,
+                "site": "99bookscart.com"
             }
             )
 

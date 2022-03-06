@@ -37,7 +37,8 @@ def getBooksHalf(searcher):
                 "title": title, 
                 "price": price, 
                 "url": url,
-                "author": author
+                "author": author,
+                "site": "halfpricebooks.in"
             }
         )
 

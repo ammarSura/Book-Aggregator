@@ -43,7 +43,8 @@ def getBooksBookFlow(searcher):
                 "title": title, 
                 "price": price, 
                 "url": url,
-                "author": ""
+                "author": "",
+                "site": "bookflow.com"
             }
         )
 

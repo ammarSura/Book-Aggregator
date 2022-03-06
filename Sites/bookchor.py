@@ -34,7 +34,8 @@ def getBooksChor(searcher):
                 "title": title, 
                 "price": price, 
                 "url": url,
-                "author": author
+                "author": author,
+                "site": "bookchor.com"
             }
         )
 

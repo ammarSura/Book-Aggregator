@@ -8,11 +8,15 @@ function printer(lst) {
       const title = document.createElement("li");
       const author = document.createElement("li");
       const price = document.createElement("li");
+      const site = document.createElement("li")
       const urlEl = document.createElement("li");
       const url = document.createElement("button");
+
       title.innerText = "Title: " + lst[i].title;
       price.innerText = "Price: ₹" + lst[i].price;
       author.innerText = "Author: " + lst[i].author;
+      site.innerText = "Website: " + lst[i].site;
+
       url.innerText = "Link";
       url.classList.add("link");
       url.onclick = function() {
@@ -23,6 +27,7 @@ function printer(lst) {
       book.appendChild(title);
       book.appendChild(author);
       book.appendChild(price);
+      book.appendChild(site)
       
       book.appendChild(urlEl)
       urlEl.appendChild(url);

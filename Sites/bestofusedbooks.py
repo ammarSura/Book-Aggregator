@@ -28,12 +28,15 @@ def getBooksbest(searcher):
         
         url = "https://bestofusedbooks.com/" + urlString[33:urlString.find("\"", 33)]
 
+        
+
         books.append(
             {
                 "title": title, 
                 "price": price, 
                 "url": url,
-                "author": ""
+                "author": "",
+                "site": "bestofusedbooks.com"
             }
         )
 

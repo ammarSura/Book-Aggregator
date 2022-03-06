@@ -38,7 +38,8 @@ def getBooksWorthing(searcher):
                 "title": title, 
                 "price": price, 
                 "url": url,
-                "author": author
+                "author": author,
+                "site": "worthing.in"
             }
         )
     return books
