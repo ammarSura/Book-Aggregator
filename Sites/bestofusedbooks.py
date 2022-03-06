@@ -9,11 +9,7 @@ def getBooksbest(searcher):
     req = requests.get(url1 + searcher + url2)
     soup = BeautifulSoup(req.text, "html.parser")
     items = (soup.find_all(class_ = "product-card product-card--list"))
-    for i in items:
-        print("==============")
-        print(i)
-        print("==============")
-
+    
     for item in items:
         
         urlString = str(item.find(class_ = "full-width-link"))
